@@ -4,13 +4,13 @@ module.exports = {
         var valorFrete = ((comprimento * largura * altura) / 6000)
         var taxaRisco = ((valorMercadoria / 100) * 0.3)
         return response.json({
-            "Frete": {
+            "Valores": {
                 "PAC": valorFrete,
                 "Sedex": valorFrete * 10,
-                "Sedex 10": valorFrete * 20,
-                "Sedex 12": valorFrete * 30
+                "Sedex10": valorFrete * 20,
+                "Sedex12": valorFrete * 30
             },
-            "Taxa Risco": valorFrete + taxaRisco
+            "TaxaRisco": valorFrete + taxaRisco
         })
     }
 }
